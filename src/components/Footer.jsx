@@ -1,19 +1,25 @@
 import React from "react";
 import { Youtube, Instagram, Facebook } from "lucide-react";
+import logo from "../assets/DEVYANTA.png";
+
 
 const Footer = () => {
     return (
-        <footer className="bg-[#4B2E0B] text-white py-10 px-6 md:px-20">
+        <footer
+            id="Contact"
+            className="bg-[#4B2E0B] text-white py-10 px-6 md:px-20"
+        >
             <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
                 {/* Logo and description */}
                 <div>
-                    <div className="flex items-center gap-2 mb-2">
-                        <span className="text-yellow-400 text-xl">★</span>
-                        <span className="font-bold text-lg">logo</span>
-                    </div>
+                    <img
+                        src={logo}
+                        className="h-8 drop-shadow-sm drop-shadow-black"
+                        alt=""
+                    />
                     <p className="text-sm">
-                        Discover your life's path through personalized astrology
-                        readings and spiritual guidance.
+                        Feel at home, wherever you are. Welcome to your perfect
+                        stay.
                     </p>
                 </div>
 
@@ -22,23 +28,23 @@ const Footer = () => {
                     <h3 className="font-semibold mb-2">Quick Links</h3>
                     <ul className="space-y-1 text-sm">
                         <li>
-                            <a href="#" className="hover:underline">
+                            <a href="#Home" className="hover:underline">
                                 Home
                             </a>
                         </li>
                         <li>
-                            <a href="#" className="hover:underline">
+                            <a href="#Rooms" className="hover:underline">
                                 Room
                             </a>
                         </li>
                         <li>
-                            <a href="#" className="hover:underline">
+                            <a href="#Gallery" className="hover:underline">
                                 Gallery
                             </a>
                         </li>
                         <li>
-                            <a href="#" className="hover:underline">
-                                Contact
+                            <a href="#Faq" className="hover:underline">
+                                Faq
                             </a>
                         </li>
                     </ul>
@@ -49,15 +55,28 @@ const Footer = () => {
                     <h3 className="font-semibold mb-2">Connect With Us</h3>
                     <div className="flex gap-3 mb-4">
                         <a href="#">
-                            <Youtube size={30} className="size-8 bg-white/10 rounded-lg p-1.25" />
+                            <Youtube
+                                size={30}
+                                className="size-8 bg-white/10 rounded-lg p-1.25"
+                            />
                         </a>
                         <a href="#">
-                            <Instagram size={30} className="size-8 bg-white/10 rounded-lg p-1.25" />
+                            <Instagram
+                                size={30}
+                                className="size-8 bg-white/10 rounded-lg p-1.25"
+                            />
                         </a>
                         <a href="#">
-                            <Facebook size={30} className="size-8 bg-white/10 rounded-lg p-1.25" />
+                            <Facebook
+                                size={30}
+                                className="size-8 bg-white/10 rounded-lg p-1.25"
+                            />
                         </a>
-                        <a href="#">
+                        <a
+                            href="https://wa.me/918745884595"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             <svg
                                 className="size-8 bg-white/10 rounded-lg p-1.25"
                                 width="30"

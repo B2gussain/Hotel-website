@@ -4,22 +4,23 @@ const testimonials = [
     {
         id: 1,
         message:
-            "It was so nice talking to you ma'am. You cleared all my doubts and guided me like my mom ❤️",
+            "The stay was absolutely wonderful! The staff were warm and welcoming from the moment I arrived. 🏨✨",
         position: "left",
     },
     {
         id: 2,
         message:
-            "Give me a call. Thank you so much for helping me take the decision 🙏",
+            "The room was spotless and the view was stunning. Definitely coming back for my next vacation! 🌅",
         position: "center",
     },
     {
         id: 3,
         message:
-            "I feel so confident now. Thanks for your support and guidance. 😊",
+            "Amazing service and delicious food. I felt so relaxed and cared for throughout my stay. 😊🍽️",
         position: "right",
     },
 ];
+
 
 const Testimonial = () => {
     const scrollContainerRef = useRef(null);
@@ -90,7 +91,7 @@ const Testimonial = () => {
     }, []);
 
     return (
-        <section className="text-center px-4 flex flex-col justify-center items-center py-12 bg-white">
+        <section id="Reviews" className="text-center px-4 flex flex-col justify-center items-center py-12 bg-white">
             <h2 className="text-3xl text-[#4A3B33] font-semibold mb-2">
                 What Our Guests Say
             </h2>

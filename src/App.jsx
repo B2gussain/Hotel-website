@@ -17,7 +17,7 @@ const App = () => {
       <SecondSection/>
       <ThirdSection/>
       <Gallery/>
-      <ForthSection/>
+      {/* <ForthSection/> */}
       <Testimonial/>
       <FaqSection/>
       <Footer/>

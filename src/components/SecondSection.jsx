@@ -1,43 +1,64 @@
 import React, { useState, useEffect } from "react";
-import secondImg from "../assets/secondImg.jpg";
+import Img1 from "/pic1.jpg";
+import Img2 from "/pic2.jpg";
+import Img3 from "/pic3.jpg";
+import Img4 from "/pic4.jpg";
+import Img5 from "/pic5.jpg";
+import Img6 from "/pic6.jpg";
+import Img7 from "/pic7.jpg";
+import Img8 from "/pic8.jpg";
 
 const SecondSection = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
 
-    // Sample room data - you can replace with actual data
+    // ✅ Updated content: removed price, added simpler descriptions
     const roomData = [
         {
-            title: "Deluxe Room",
-            description: "Cozy space with modern amenities.",
-            price: "1999",
-            image: secondImg,
+            title: "Living Hall",
+            description: "Spacious and cozy hall area with modern interiors.",
+            image: Img1,
         },
         {
-            title: "Premium Suite",
-            description: "Spacious suite with premium amenities.",
-            price: "2999",
-            image: secondImg,
+            title: "Front View Room",
+            description: "Beautiful front-facing room with natural light.",
+            image: Img2,
         },
         {
-            title: "Executive Room",
-            description: "Perfect for business travelers.",
-            price: "2499",
-            image: secondImg,
+            title: "Wash Basin",
+            description: "Clean and well-maintained wash area.",
+            image: Img3,
         },
         {
-            title: "Family Room",
-            description: "Comfortable space for the whole family.",
-            price: "3499",
-            image: secondImg,
+            title: "TV Panel",
+            description: "Modern TV unit with comfortable seating space.",
+            image: Img4,
+        },
+        {
+            title: "Main Room",
+            description: "Comfortable room with premium ambiance.",
+            image: Img5,
+        },
+        {
+            title: "Bed Area",
+            description: "Cozy bed area for a relaxing stay.",
+            image: Img6,
+        },
+        {
+            title: "Bathroom",
+            description: "Hygienic bathroom with modern fittings.",
+            image: Img7,
+        },
+        {
+            title: "Sofa Section",
+            description: "Elegant sofa space to relax and unwind.",
+            image: Img8,
         },
     ];
 
-    // Auto scroll functionality
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentSlide((prev) => (prev + 1) % roomData.length);
-        }, 4000); // Change slide every 4 seconds
-
+        }, 4000);
         return () => clearInterval(interval);
     }, [roomData.length]);
 
@@ -54,7 +75,7 @@ const SecondSection = () => {
     const currentRoom = roomData[currentSlide];
 
     return (
-        <section className="w-full grid grid-cols-1 md:grid-cols-2">
+        <section id="Rooms" className="w-full grid grid-cols-1 md:grid-cols-2">
             {/* Image Slider Section */}
             <div className="flex justify-center p-0 sm:p-8 bg-[#FFDDAD] items-center relative">
                 <div className="w-full relative overflow-hidden md:rounded-lg shadow-md">
@@ -133,17 +154,16 @@ const SecondSection = () => {
                 </div>
             </div>
 
-            {/* Text Content Section - No sliding, just content change */}
+            {/* Text Content Section */}
             <div className="flex flex-col p-4 md:p-10 bg-white justify-center space-y-4">
                 <h3 className="md:text-center playfair-display lg:text-left text-3xl lg:text-[32px] font-extrabold text-[#6C4002] leading-tight">
                     Our Rooms & Suites
                 </h3>
                 <p className="md:text-center lg:text-left text-sm md:text-base text-[#6C4002]/80">
-                    Choose from a variety of luxurious rooms designed to provide
-                    comfort and relaxation.
+                    Explore the spaces and amenities that make your stay
+                    unforgettable.
                 </p>
 
-                {/* Room Details - Static, just changes content */}
                 <div className="flex flex-col">
                     <h3 className="text-2xl font-semibold text-black">
                         {currentRoom.title}
@@ -154,9 +174,9 @@ const SecondSection = () => {
                 </div>
 
                 <p className="text-[#4A3B33] font-bold text-[16px]">
-                    Free Services{" "}
+                    Free Services
                 </p>
-                <div className="flex gap-8 text-black font-semibold">
+                <div className="flex gap-8 text-black font-semibold flex-wrap">
                     <div className="flex flex-col justify-center items-center">
                         <img src="/Group-1.svg" className="h-8 w-8" alt="TV" />
                         <p className="text-[12px]">TV</p>
@@ -185,16 +205,26 @@ const SecondSection = () => {
                         />
                         <p className="text-[12px]">Bedroom</p>
                     </div>
+                    <div className="flex flex-col justify-center items-center">
+                        <img
+                            src="/Group-5.svg"
+                            className="h-8 w-8"
+                            alt="Security"
+                        />
+                        <p className="text-[12px]">Security</p>
+                    </div>
                 </div>
 
-                {/* Price and Button - Static, just changes content */}
-                <div className="flex flex-col-reverse md:flex-row gap-4 mt-4 ">
-                    <button className="bg-[#6C4002] hover:bg-[#6C4002] text-white text-base sm:text-lg py-3 px-18 rounded-xl font-semibold">
+                {/* Book Button only */}
+                <div className="flex flex-col-reverse md:flex-row gap-4 mt-4">
+                    <a
+                        href="https://wa.me/918745884595"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-[#6C4002] text-center hover:bg-[#6C4002] text-white text-base sm:text-lg py-3 px-18 rounded-xl font-semibold"
+                    >
                         Book Now
-                    </button>
-                    <p className="text-black text-xl lg:text-2xl my-auto font-bold">
-                        Start with ₹{currentRoom.price}
-                    </p>
+                    </a>
                 </div>
 
                 <p className="text-black text-sm font-semibold">

@@ -5,18 +5,15 @@ const Gallery = () => {
     const [isMobile, setIsMobile] = useState(false);
 
     const allImages = [
-        { id: 1, src: "/picf.jpg", alt: "Gallery image 1" },
-        { id: 2, src: "/pics.jpg", alt: "Gallery image 2" },
-        { id: 3, src: "/pict.jpg", alt: "Gallery image 3" },
-        { id: 4, src: "/picr.jpg", alt: "Gallery image 4" },
-        { id: 5, src: "/picf.jpg", alt: "Gallery image 5" },
-        { id: 6, src: "/pics.jpg", alt: "Gallery image 6" },
-        { id: 7, src: "/pict.jpg", alt: "Gallery image 7" },
-        { id: 8, src: "/picr.jpg", alt: "Gallery image 8" },
-        { id: 9, src: "/picf.jpg", alt: "Gallery image 9" },
-        { id: 10, src: "/pics.jpg", alt: "Gallery image 10" },
-        { id: 11, src: "/pict.jpg", alt: "Gallery image 11" },
-        { id: 12, src: "/picr.jpg", alt: "Gallery image 12" },
+        { id: 1, src: "/pic1.jpg", alt: "Gallery image 1" },
+        { id: 2, src: "/pic2.jpg", alt: "Gallery image 2" },
+        { id: 3, src: "/pic3.jpg", alt: "Gallery image 3" },
+        { id: 4, src: "/pic4.jpg", alt: "Gallery image 4" },
+        { id: 5, src: "/pic5.jpg", alt: "Gallery image 5" },
+        { id: 6, src: "/pic6.jpg", alt: "Gallery image 6" },
+        { id: 7, src: "/pic7.jpg", alt: "Gallery image 7" },
+        { id: 8, src: "/pic8.jpg", alt: "Gallery image 8" },
+      
     ];
 
     // Detect mobile screen size
@@ -35,7 +32,7 @@ const Gallery = () => {
         : allImages.slice(0, 8); // show 8 on desktop initially
 
     return (
-        <section className="bg-[#F4F4F4] py-12 px-4 sm:px-6 lg:px-10">
+        <section id="Gallery" className="bg-[#F4F4F4] py-12 px-4 sm:px-6 lg:px-10">
             {/* Header */}
             <div className=" mb-4">
                 <h2 className="text-4xl lg:text-5xl font-bold text-[#6C4002] playfair-display mb-0">
